@@ -1,0 +1,1 @@
+Audit this Google Sheets media production system. Find structural problems, missing columns, fragile formulas, manual steps that can be automated, and dashboard improvements. Do not rewrite the system from scratch. Suggest safe improvements first.

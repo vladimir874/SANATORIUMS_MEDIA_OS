@@ -1,0 +1,1 @@
+Create Google Sheets formulas for Dashboard metrics: plan for next 7 days, overdue plan rows, production by status, tasks without Drive link, items that need shooting from audit, and material type counts.
