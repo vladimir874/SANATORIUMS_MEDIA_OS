@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "category_order": [
+    "a_roll",
+    "exterior",
+    "drone",
+    "interior",
+    "exterior_interior_mixed",
+    "rooms",
+    "dining_breakfast",
+    "dining_lunch",
+    "dining_dinner",
+    "treatment",
+    "wellness",
+    "doctor_interview",
+    "chef_interview",
+    "director_interview",
+    "guest_comments"
+  ],
+  "aliases": {
+    "a_roll": [
+      "1_подводки_комменты",
+      "01_Комментарии",
+      "Комментарии",
+      "подводки",
+      "начитки",
+      "Начитки_Voiceover"
+    ],
+    "exterior": [
+      "2_экстерьер",
+      "02_Экстерьер",
+      "Экстерьер",
+      "Экстеръер"
+    ],
+    "drone": [
+      "2_экстерьер_дрон",
+      "02_Дрон",
+      "DRON",
+      "drone"
+    ],
+    "interior": [
+      "2_интерьер",
+      "03_Интерьер",
+      "Интерьер"
+    ],
+    "exterior_interior_mixed": [
+      "Экстеръер + Интеръер"
+    ],
+    "rooms": [
+      "3_двухместный_номер",
+      "04_Номера",
+      "Номера",
+      "Двухместный номер"
+    ],
+    "dining_breakfast": [
+      "4_питание_завтрак",
+      "05_Питание_Завтрак",
+      "Питание/завтрак",
+      "завтрак"
+    ],
+    "dining_lunch": [
+      "4_питание_обед",
+      "05_Питание_Обед",
+      "Питание/обед",
+      "обед"
+    ],
+    "dining_dinner": [
+      "4_питание_ужин",
+      "05_Питание_Ужин",
+      "Питание/ужин",
+      "ужин"
+    ],
+    "treatment": [
+      "5_процедуры_лечение",
+      "06_Лечение",
+      "Лечение",
+      "Процедуры"
+    ],
+    "wellness": [
+      "6_веллнесс",
+      "07_SPA_Wellness",
+      "Бассейн / wellness",
+      "Бассейн",
+      "Wellness"
+    ],
+    "doctor_interview": ["врач", "Интервью_врач"],
+    "chef_interview": ["повар", "Интервью_повар"],
+    "director_interview": ["директор", "Интервью_директор"],
+    "guest_comments": ["комменты", "Отзывы", "guest_comments"]
+  },
+  "excluded_directories": [
+    "proxies",
+    "outbox",
+    ".git",
+    "__pycache__"
+  ]
+}

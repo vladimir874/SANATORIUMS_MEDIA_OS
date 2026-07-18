@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0.0",
+  "validated_at": "2026-07-18T22:10:53+02:00",
+  "status": "pass",
+  "scope": "HOTELCUT Stage 1 Step 1.2 metadata analysis for Olymp IV",
+  "inputs": {
+    "scan_report": "outputs/olymp-iv-scan.json",
+    "metadata_report": "outputs/olymp-iv-metadata.json",
+    "exiftool_version": "13.59"
+  },
+  "checks": {
+    "automated_tests": {
+      "passed": 15,
+      "failed": 0
+    },
+    "inventory_identity": {
+      "expected_files": 134,
+      "matched_files": 134,
+      "duplicate_media_ids": 0,
+      "duplicate_paths": 0
+    },
+    "source_integrity": {
+      "files_present": 134,
+      "size_matches": 134,
+      "sampled_sha256_fingerprint_matches": 134,
+      "source_files_modified_by_analysis": 0
+    },
+    "required_metadata": {
+      "valid_files": 134,
+      "invalid_files": 0,
+      "exiftool_read_failures": 0
+    },
+    "technical_profiles": [
+      {
+        "count": 127,
+        "codec": "H.264/AVC",
+        "width": 1920,
+        "height": 1080,
+        "frame_rate_numerator": 50,
+        "frame_rate_denominator": 1
+      },
+      {
+        "count": 7,
+        "codec": "H.265/HEVC",
+        "width": 3840,
+        "height": 2160,
+        "frame_rate_numerator": 60000,
+        "frame_rate_denominator": 1001
+      }
+    ],
+    "duration": {
+      "total_seconds": 1850.925251,
+      "display": "00:30:50.925"
+    },
+    "capture_order": {
+      "scope": "within_category",
+      "categories_checked": 9,
+      "contiguous_categories": 9,
+      "creative_edit_order_fields": 0
+    },
+    "determinism": {
+      "repeat_report_byte_identical": true,
+      "report_sha256": "86B7E95EE0E39E49EF960CC7674111BE0C14EB9BF5AEE5C4250F334D64520314"
+    }
+  },
+  "acknowledged_warnings": {
+    "audio_track_missing": 7,
+    "capture_timezone_unspecified": 7,
+    "timecode_track_without_readable_start": 127
+  },
+  "conclusion": "The Stage 1.2 analysis is complete, reproducible, and did not modify source media. The acknowledged warnings are preserved for later proxy and Premiere XML decisions."
+}

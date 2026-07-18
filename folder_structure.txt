@@ -1,0 +1,37 @@
+HAMILTON
+├───DRON
+│   ├───foto
+│   └───video
+├───Бассейн
+│   ├───видео
+│   └───фото
+├───Двухместный номер
+│   ├───foto
+│   └───видео
+├───интервью физио + директор + повар
+│   ├───foto
+│   ├───video director
+│   ├───video fyzio
+│   └───video povar
+├───комменты
+│   └───ADOBE PROJECT EXPERT OPINION
+│       ├───Adobe Premiere Pro Audio Previews
+│       │   └───expertka.PRV
+│       │       └───Peak Files
+│       └───Adobe Premiere Pro Auto-Save
+├───Лечение
+│   ├───foto
+│   └───video
+├───Питание
+│   ├───завтрак
+│   │   ├───видео
+│   │   └───фото
+│   ├───обед
+│   │   ├───видео
+│   │   └───фото
+│   └───ужин
+│       ├───видео
+│       └───фото
+└───Экстеръер + Интеръер
+    ├───video
+    └───фото
