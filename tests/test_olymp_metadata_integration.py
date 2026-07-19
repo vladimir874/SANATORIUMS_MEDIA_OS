@@ -1,10 +1,11 @@
 from __future__ import annotations
 
 import json
+import os
 import sys
 import unittest
 from collections import Counter, defaultdict
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
@@ -15,6 +16,14 @@ from hotelcut.scanner import _fingerprint  # noqa: E402
 
 SCAN_REPORT = PROJECT_ROOT / "outputs" / "olymp-iv-scan.json"
 METADATA_REPORT = PROJECT_ROOT / "outputs" / "olymp-iv-metadata.json"
+
+
+def _source_path(item: dict[str, object]) -> Path:
+    override = os.environ.get("HOTELCUT_OLYMP_ROOT")
+    if override:
+        relative = PurePosixPath(str(item["relative_path"]))
+        return Path(override).joinpath(*relative.parts)
+    return Path(str(item["absolute_path"]))
 
 
 class OlympMetadataIntegrationTests(unittest.TestCase):
@@ -38,8 +47,14 @@ class OlympMetadataIntegrationTests(unittest.TestCase):
                 self.assertEqual(enriched[field], scanned[field], f"{media_id}: {field}")
 
     def test_every_source_still_matches_scanned_size_and_fingerprint(self) -> None:
+        first_path = _source_path(self.media[0])
+        if not first_path.is_file():
+            raise unittest.SkipTest(
+                "Real Olymp IV sources are unavailable; set HOTELCUT_OLYMP_ROOT "
+                "to enable the 134-file integrity check"
+            )
         for item in self.media:
-            path = Path(item["absolute_path"])
+            path = _source_path(item)
             self.assertTrue(path.is_file(), item["relative_path"])
             size = path.stat().st_size
             self.assertEqual(size, item["size_bytes"], item["relative_path"])
